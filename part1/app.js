@@ -13,6 +13,6 @@ async function start() {
             password: '',
             database: 'DogWalkService'
         });
-        
+        console.log("Connecting to My")
     }
 }
