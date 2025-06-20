@@ -15,6 +15,8 @@ async function start() {
         });
         console.log("Connecting to MySQL");
 
+        //testing data
+
         
     }
 }
