@@ -46,8 +46,10 @@ app.get('/api/walkrequests/open', async (req, res) => {
             JOIN Users u ON d.owner_id = u.user_id
             WHERE wr.status = 'open'`
         );
+    } catch (err) {
+        res.status(500).json({ error: err.messsage });
     }
-})
+});
 app.get('/api/walkers/summary', async (req, res) => {
     try {
         const [rows] = await db.execute(
