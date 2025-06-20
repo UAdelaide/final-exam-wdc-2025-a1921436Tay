@@ -69,7 +69,7 @@ VALUES ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'Medium'
 ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Spot', 'Small');
 
 INSERT INTO WalkRequest (dog_id, requested_time, duration_minutes, location, status)
-VALUES ((SELECT dog_id FROM Dogs WHERE name ='Max'),'2025-06-10', ,'',''),
+VALUES ((SELECT dog_id FROM Dogs WHERE name ='Max'),'2025-06-10 08:00:00', 30,'Parklands','open'),
 VALUES ((SELECT dog_id FROM Dogs WHERE name =''),'', ,'',''),
 VALUES ((SELECT dog_id FROM Dogs WHERE name =''),'', ,'',''),
 VALUES ((SELECT dog_id FROM Dogs WHERE name =''),'', ,'',''),
