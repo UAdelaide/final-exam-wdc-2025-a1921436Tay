@@ -31,6 +31,6 @@ start();
 
 app.get('/api/dogs', async (req, res) => {
     try {
-        const [rows]
+        const [rows] = await db.execute()
     }
 });
