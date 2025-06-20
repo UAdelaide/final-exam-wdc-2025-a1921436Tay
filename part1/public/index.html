@@ -1,55 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>DOG!!!</title>
+  <meta charset="UTF-8" />
+  <title>Doggo of the Day</title>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <style>
     body {
-      background: url('https://www.toptal.com/designers/subtlepatterns/patterns/error.png');
-      color: red;
-      font-family: Comic Sans MS;
-      font-size: 1.2rem;
-      text-align: center;
-      animation: flash 0.5s infinite;
+      background: linear-gradient(45deg, #ff00ff, #00ffff);
+      font-family: Comic Sans MS, cursive, sans-serif;
+      color: yellow;
+      animation: flash 1s infinite;
     }
     @keyframes flash {
-      0% { background-color: pink; }
-      50% { background-color: lime; }
-      100% { background-color: pink; }
+      0% { background-color: #ff00ff; }
+      50% { background-color: #00ffff; }
+      100% { background-color: #ff00ff; }
+    }
+    .dog-pic {
+      width: 500px;
+      height: 500px;
+      border: 10px dashed red;
+    }
+    .info {
+      margin: 100px;
+      font-size: 28px;
     }
     button {
-      margin-top: 30px;
-      padding: 20px;
       font-size: 24px;
-      cursor: none;
+      padding: 20px;
+      cursor: crosshair;
     }
   </style>
 </head>
 <body>
   <div id="app">
-    <h1>Click the button below for a DOG!!!</h1>
-    <p>Seriously, it's very important that you click it NOW. Or maybe later. Or both?</p>
-    <button type="button" @click="getDog">SEE DOG</button>
-
-    <div v-if="dog">
-      <h2>DOG OF THE DAY!! </h2>
-      <img alt="dogg" src="dog" style="width: 80%; border: 10px dashed blue;">
-      <p>Name: Woofie McDoggo<br>Breed: Mystery Mutt<br>Age: Approximately infinite</p>
+    <h1 tabindex="0">🎉 Welcome to Doggo Central! 🎉</h1>
+    <img :src="dogImage" alt="" class="dog-pic" />
+    <div class="info">
+      <p>Name: Woofy McDogFace</p>
+      <p>Breed: Rainbow Terrier</p>
+      <p>Description: Barks at pixels. Enjoys loud music and chasing nothing.</p>
+      <p><input type="text" placeholder="Tell us how cute this dog is" /></p>
     </div>
+    <button @click="getDog">SEE ANOTHER DOG</button>
   </div>
 
   <script>
     const { createApp } = Vue;
+
     createApp({
       data() {
-        return { dog: null }
+        return {
+          dogImage: ''
+        };
+      },
+      mounted() {
+        this.getDog();
       },
       methods: {
-        async getDog() {
-          const res = await fetch("https://dog.ceo/api/breeds/image/random");
-          const data = await res.json();
-          this.dog = data.message;
+        getDog() {
+          fetch("https://dog.ceo/api/breeds/image/random")
+            .then(res => res.json())
+            .then(data => {
+              this.dogImage = data.message;
+            });
         }
       }
     }).mount("#app");
