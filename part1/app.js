@@ -4,3 +4,7 @@ const app = express();
 const port = 8080;
 
 let db;
+
+async function start() {
+    try 
+}
