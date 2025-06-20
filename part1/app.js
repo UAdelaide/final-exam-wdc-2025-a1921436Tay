@@ -27,6 +27,8 @@ app.get('/api/dogs', async (req, res) => {
     try {
         const [rows] = await db.execute(
             SELECT d.name AS dog_name, d.size, u.username As owner_username
+            FROM Dogs d
+            
         )
     }
 });
