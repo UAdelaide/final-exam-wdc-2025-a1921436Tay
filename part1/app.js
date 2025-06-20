@@ -9,6 +9,8 @@ async function start() {
     try {
         db = await mysql.createConnection({
             host: 'localhost',
+            user: 'root',
+            password: '',
             
         })
     }
