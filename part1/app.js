@@ -20,6 +20,6 @@ async function start() {
             console.log(`Server running at port ${port} `);
         });
 
-
+    } catch (error)
     }
 }
