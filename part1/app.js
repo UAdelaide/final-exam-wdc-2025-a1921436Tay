@@ -111,7 +111,7 @@ let db;
     }
 
   } catch (err) {
-    console.error('❌ Error setting up database. Make sure MySQL is running:', err.message);
+    console.error('Error setting up database. Make sure MySQL is running:', err.message);
   }
 })();
 
