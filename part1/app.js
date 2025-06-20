@@ -40,7 +40,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
     try {
         const [rows] = await db.execute(
             `SELECT wr.request.id, d.name AS dog_name, wr.request_time,
-            wr.duration_minutes`
+            wr.duration_minutes, wr.location, u.username AS owner_username`
         )
     }
 })
