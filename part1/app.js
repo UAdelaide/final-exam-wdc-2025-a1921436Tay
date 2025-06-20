@@ -16,6 +16,8 @@ async function start() {
         console.log('Connecting to MySQL');
 
         //testing port
-        app.listen(port, () =>console.log(`Server running at port ${port} `)
+        app.listen(port, () => {
+            console.log(`Server running at port ${port} `);
+            
     }
 }
