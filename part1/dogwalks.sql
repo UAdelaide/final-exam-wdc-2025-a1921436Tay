@@ -67,3 +67,5 @@ VALUES ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'Medium'
 ((SELECT user_id FROM Users WHERE username = 'pam123'), 'Tiny', 'Large'),
 ((SELECT user_id FROM Users WHERE username = 'pam123'), 'Biggie', 'Small'),
 ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Spot', 'Small');
+
+
