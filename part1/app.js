@@ -14,12 +14,6 @@ async function start() {
             database: 'DogWalkService'
         });
 
-        //testing port
-
-        app.listen(port, () => {
-            console.log(`Server running at port ${port} `);
-        });
-
     } catch (error) {
         console.error('Failed to connect to database:', error.message);
     }
