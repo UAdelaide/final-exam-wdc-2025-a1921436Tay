@@ -18,6 +18,6 @@ async function start() {
         //testing port
         app.listen(port, () => {
             console.log(`Server running at port ${port} `);
-        })
+        });
 }
 }
