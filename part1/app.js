@@ -1,2 +1,2 @@
 const express = require('express');
-const mysql = require('mys')
+const mysql = require('mysql2')
