@@ -27,3 +27,6 @@ async function start() {
 
 start();
 
+// Routes
+
+app.get('/')
