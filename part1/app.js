@@ -16,7 +16,6 @@ async function start() {
         console.log('Connecting to MySQL');
 
         //testing data
-
-        console.log(`Server running at http `)
+        console.log(`Server running at port ${port} `)
     }
 }
