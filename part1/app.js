@@ -11,7 +11,7 @@ async function start() {
             host: 'localhost',
             user: 'root',
             password: '',
-            
+            database: 'DogWalkService'
         })
     }
 }
