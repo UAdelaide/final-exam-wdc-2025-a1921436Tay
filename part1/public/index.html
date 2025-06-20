@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Dog Of The Day</title>
-  <link href="style.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <title>DOG!!!</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <style>
+    body {
+      background: url('https://www.toptal.com/designers/subtlepatterns/patterns/error.png');
+      color: red;
+      font-family: Comic Sans MS;
+      font-size: 1.2rem;
+      text-align: center;
+      animation: flash 0.5s infinite;
+    }
+    @keyframes flash {
+      0% { background-color: pink; }
+      50% { background-color: lime; }
+      100% { background-color: pink; }
+    }
+    button {
+      margin-top: 30px;
+      padding: 20px;
+      font-size: 24px;
+      cursor: none;
+    }
+  </style>
 </head>
 <body>
+  <div id="app">
+    <h1>Click the button below for a DOG!!!</h1>
+    <p>Seriously, it's very important that you click it NOW. Or maybe later. Or both?</p>
+    <button type@click="getDog">SEE DOG</button>
+
+    <div v-if="dog">
+      <h2>DOG OF THE DAY!! 🐶</h2>
+      <img :src="dog" style="width: 80%; border: 10px dashed blue;">
+      <p>Name: Woofie McDoggo<br>Breed: Mystery Mutt<br>Age: Approximately infinite</p>
+    </div>
+  </div>
 
   <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return { dog: null }
+      },
+      methods: {
+        async getDog() {
+          const res = await fetch("https://dog.ceo/api/breeds/image/random");
+          const data = await res.json();
+          this.dog = data.message;
+        }
+      }
+    }).mount("#app");
   </script>
 </body>
 </html>
