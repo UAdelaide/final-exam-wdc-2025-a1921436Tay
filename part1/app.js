@@ -29,4 +29,4 @@ start();
 
 // Routes
 
-app.get('/')
+app.get('/api/dogs', async (req, res)')
