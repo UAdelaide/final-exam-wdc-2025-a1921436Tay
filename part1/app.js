@@ -7,6 +7,9 @@ let db;
 
 async function start() {
     try {
-        db = await mysql.createConnection()
+        db = await mysql.createConnection({
+            host: 'localhost',
+            
+        })
     }
 }
