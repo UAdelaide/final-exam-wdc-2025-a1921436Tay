@@ -48,6 +48,7 @@ app.get('/api/walkers/summary', async (req, res) => {
             LEFT JOIN WalkRequests wr ON wr.status = 'completed' AND r.request_id = wr.request_id
             WHERE u.role = 'walker'
             GROUP BY u.user_id`
-        )
+        );
+        res.json(rows)
     }
 })
