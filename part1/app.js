@@ -13,10 +13,9 @@ async function start() {
             password: '',
             database: 'DogWalkService'
         });
-        console.log('Connecting to MySQL');
 
         //testing port
-        
+
         app.listen(port, () => {
             console.log(`Server running at port ${port} `);
         });
