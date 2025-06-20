@@ -13,10 +13,10 @@ async function start() {
             password: '',
             database: 'DogWalkService'
         });
-        console.log("Connecting to MySQL");
+        console.log('Connecting to MySQL');
 
         //testing data
 
-        console.log(``)
+        console.log(`Server running at `)
     }
 }
