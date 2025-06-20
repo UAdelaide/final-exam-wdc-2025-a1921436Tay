@@ -12,6 +12,7 @@ async function start() {
             user: 'root',
             password: '',
             database: 'DogWalkService'
-        })
+        });
+        
     }
 }
