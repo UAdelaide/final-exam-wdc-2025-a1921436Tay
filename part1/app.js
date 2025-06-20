@@ -21,7 +21,7 @@ async function start() {
         });
 
     } catch (error) {
-        console.error("")
+        console.error('Failed to connect to database:', errorm)
     }
     }
 }
