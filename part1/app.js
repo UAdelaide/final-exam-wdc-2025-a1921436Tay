@@ -17,6 +17,6 @@ async function start() {
 
         //testing data
 
-        console.log(`Server running at `)
+        console.log(`Server running at http `)
     }
 }
