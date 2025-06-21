@@ -46,6 +46,7 @@ document.getElementById('logout-button').addEventListener('click', async () => {
         const res = await fetch('/api/users/logout', {
             method: 'POST',
             credentials: 'include'
-        })
+        });
+        if (res.)
     }
 })
