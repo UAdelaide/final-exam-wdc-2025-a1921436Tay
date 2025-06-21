@@ -10,10 +10,3 @@ const pool = mysql.createPool({
 });
 
 module.exports = pool;
-
-const db = await mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'DogWalkService' 
-});
