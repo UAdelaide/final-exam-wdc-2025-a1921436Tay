@@ -6,7 +6,7 @@ const app = express();
 
 //session middleware
 app.use(session({
-  secret: 'mySuperSecret', 
+  secret: 'mySuperSecret',
   resave: false,
   saveUninitialized: false,
   cookie: { secure: false } // false for local HTTP
