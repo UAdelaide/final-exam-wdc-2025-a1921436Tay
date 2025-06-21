@@ -7,6 +7,9 @@ document.getElementById('logout-button').addEventListener('click', async () => {
             window.location.href = '/index.html';
 
     } catch (err) {
+        
 
+    } finally {
+        window.location.href = '/index.html';
     }
 });
