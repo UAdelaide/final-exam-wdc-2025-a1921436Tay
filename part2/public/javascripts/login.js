@@ -55,4 +55,4 @@ document.getElementById('logout-button').addEventListener('click', async () => {
     } catch (err) {
         alert('Error');
     }
-})
+});
