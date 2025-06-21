@@ -7,6 +7,6 @@ document.getElementById('logout-button').addEventListener('click', async () => {
             window.location.href = '/index.html';
 
     } catch (err) {
-        window.location.href = '/index.html';
+
     }
 });
