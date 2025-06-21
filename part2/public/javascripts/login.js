@@ -53,6 +53,6 @@ document.getElementById('logout-button').addEventListener('click', async () => {
             alert('Logout Failed');
         }
     } catch (err) {
-        alert('Error');
+        error.value = 'An error occurred during login.';
     }
 });
