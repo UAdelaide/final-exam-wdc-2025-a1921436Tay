@@ -1,5 +1,5 @@
 const { createApp, ref } = Vue;
-// Create Vue 
+// Create Vue application
 createApp({
   setup() {
     const form = ref({ email: '', password: '' });
