@@ -7,11 +7,12 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
+app.use('/api', require('./routes/dogRoutes'));
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
-app.use('/api', require('./routes/dogRoutes'));
+
 
 const session = require('express-session');
 app.use(session({
