@@ -9,4 +9,4 @@ document.getElementById('logout-button').addEventListener('click', async () => {
     } catch (err) {
         window.location.href = '/index.html';
     }
-});
+}); 
