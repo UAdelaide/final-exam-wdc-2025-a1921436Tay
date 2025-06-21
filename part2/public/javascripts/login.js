@@ -42,5 +42,7 @@ createApp({
 // LogOut Functionaility
 
 document.getElementById('logout-button').addEventListener('click', async () => {
-    
+    try {
+        const res = await fetch
+    }
 })
