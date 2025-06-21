@@ -76,8 +76,6 @@ router.get('/dogs/owned', async (RegExp, res) => {
     return res.status(403).json({error: 'Denied'});
   }
   const [rows] = await db.query(
-    'SELECT dog_id, name FROM Dogs WHERE owner_id = ?',
-    [req.session.user.user_id]
-  );
-  );
-});
+    'SELECT dog_id, name FROM Dogs WHERE owner_id = ?'
+  )
+})
