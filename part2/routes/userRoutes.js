@@ -70,9 +70,9 @@ router.post('/logout', (req, res) => {
   });
 });
 
-//dogs request 
+//dogs request
 
-router.get('/dogs/owned', async (req, res) => {
+router.get('/api/dogs/owned', async (req, res) => {
   if (!req.session.user || req.session.user.role !== 'owner') {
     return res.status(403).json({ error: 'Denied' });
   }
