@@ -40,6 +40,10 @@ router.get('/me', (req, res) => {
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
+  if (!email || !password) {
+    return res.status(400).json({ error: 'Email and password are required' });
+  }
+
   try {
     const [rows] = await db.query(`
       SELECT user_id, username, role FROM Users
@@ -50,11 +54,16 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
 
-    // ✅ Set session
-    req.session.user = rows[0];
+    // ✅ Set the user info into the session
+    req.session.user = {
+      user_id: rows[0].user_id,
+      username: rows[0].username,
+      role: rows[0].role
+    };
 
-    res.json({ message: 'Login successful', user: rows[0] });
+    res.status(200).json({ message: 'Login successful', user: req.session.user });
   } catch (error) {
+    console.error('Login error:', error);
     res.status(500).json({ error: 'Login failed' });
   }
 });
