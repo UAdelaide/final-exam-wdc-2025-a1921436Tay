@@ -11,9 +11,9 @@ const pool = mysql.createPool({
 
 module.exports = pool;
 
-  await mysql.createConnection({
+const db = await mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'DogWalkService'
+  database: 'DogWalkService' 
 });
