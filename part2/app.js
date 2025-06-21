@@ -4,7 +4,14 @@ require('dotenv').config();
 
 const app = express();
 
-//add 
+//session middleware
+app.use(session({
+  secret: 'mySuperSecret', // you can pull from .env too
+  resave: false,
+  saveUninitialized: false,
+  cookie: { secure: false } // false for local HTTP
+}));
+
 
 // Middleware
 app.use(express.json());
