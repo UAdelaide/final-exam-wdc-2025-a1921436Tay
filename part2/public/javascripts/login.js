@@ -43,6 +43,8 @@ createApp({
 
 document.getElementById('logout-button').addEventListener('click', async () => {
     try {
-        const res = await fetch('/api/users')
+        const res = await fetch('/api/users/logout', {
+            method: 
+        })
     }
 })
