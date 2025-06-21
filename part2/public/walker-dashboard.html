@@ -68,13 +68,18 @@
           }
         }
         async function applyToWalk(requestId) {
-          try {
-            const res = await fetch(`/api/walks/${requestId}/apply`, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ walker_id: user })
-            });
-            const result = await res.json();
+          const user = await getCurrentUser();
+          if (!user || user.role !== 'walker') {
+            alert('Only walkers can apply for walks.');
+            return;
+          }
+
+          await fetch(`/api/walks/${requestId}/apply`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ walker_id: user.user_id })
+          });
+        }
 
             if (!res.ok) throw new Error(result.error || 'Application failed');
             message.value = result.message;
