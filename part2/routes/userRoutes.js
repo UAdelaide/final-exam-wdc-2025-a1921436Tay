@@ -69,14 +69,3 @@ router.post('/logout', (req, res) => {
     res.json({ messgae: 'Logout Successful'});
   });
 });
-
-// api dogs owned
-router.get('/dogs/owned', async (RegExp, res) => {
-  if (!req.sesson.user || req.session.user.role !== 'owner') {
-    return res.status(403).json({error: 'Denied'});
-  }
-  const [rows] = await db.query(
-    'SELECT dog_id, name FROM Dogs WHERE owner_id = ?',
-    [req.session.user.user_id]
-  );
-});
