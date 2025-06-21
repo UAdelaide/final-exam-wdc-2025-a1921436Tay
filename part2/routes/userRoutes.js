@@ -70,4 +70,5 @@ router.post('/logout', (req, res) => {
   });
 });
 
-// Get
+// api dogs owned
+router.get('/dogs/owned')
