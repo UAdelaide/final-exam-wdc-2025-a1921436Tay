@@ -17,6 +17,7 @@ createApp({
 
         const result = await res.json();
 
+        // successful log in handling
         if (!res.ok) {
           error.value = result.error || 'Login failed';
           return;
