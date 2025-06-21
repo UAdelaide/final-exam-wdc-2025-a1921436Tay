@@ -86,7 +86,9 @@
         const message = ref('');
         const error = ref('');
 
-        onMounted(async () =>)
+        onMounted(async () => {
+          const res = await fetch('api')
+        })
         async function loadWalks() {
           try {
             const res = await fetch('/api/walks');
