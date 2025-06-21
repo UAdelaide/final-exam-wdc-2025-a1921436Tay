@@ -87,7 +87,8 @@
         const error = ref('');
 
         onMounted(async () => {
-          const res = await fetch('api')
+          const res = await fetch('/api/dogs/owned');
+          dogs
         })
         async function loadWalks() {
           try {
