@@ -22,7 +22,7 @@ createApp({
           error.value = result.error || 'Login failed';
           return;
         }
-
+        // directing user to correct dashboard
         if (result.user.role === 'owner') {
           window.location.href = 'owner-dashboard.html';
         } else if (result.user.role === 'walker') {
