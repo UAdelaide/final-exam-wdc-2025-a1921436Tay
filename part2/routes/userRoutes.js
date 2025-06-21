@@ -76,7 +76,6 @@ router.get('/dogs/owned', async (req, res) => {
   if (!req.session.user || req.session.user.role !== 'owner') {
     return res.status(403).json({ error: 'Access denied' });
   }
-
   try {
     const [rows] = await db.query(
       'SELECT dog_id, name FROM Dogs WHERE owner_id = ?',
