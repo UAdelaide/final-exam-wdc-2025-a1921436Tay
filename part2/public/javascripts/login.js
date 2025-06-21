@@ -41,4 +41,4 @@ createApp({
 
 // LogOut Functionaility
 
-document.getElementById()
+document.getElementById('logout-button').addEventListener('click')
