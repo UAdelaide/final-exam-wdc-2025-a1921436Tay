@@ -11,7 +11,7 @@
 <body class="bg-light">
   <div id="app" class="container py-5">
     <h1 class="text-primary mb-4">Welcome to the Dog Walking Service!</h1>
-    <form @submit.prevent="login" class="bg-white p-4 rounded shadow-sm" style="max-width: 400px;">
+    <form @submit.prevent="login" class="login-form" >
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
         <input type="email" id="email" v-model="form.email" class="form-control" required>
