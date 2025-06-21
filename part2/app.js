@@ -12,6 +12,13 @@ app.use(express.static(path.join(__dirname, '/public')));
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 
+const session = require('express-session');
+app.use(session({
+  secret: 'dog', // just a dummy string for dev
+  resave: false,
+  saveUninitialized: false
+}));
+
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
