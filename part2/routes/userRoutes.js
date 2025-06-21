@@ -59,3 +59,4 @@ module.exports = router;
 
 // Logout functionailty
 
+router.post
