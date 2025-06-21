@@ -5,8 +5,8 @@ document.getElementById('logout-button').addEventListener('click', async () => {
             credentials: 'include'
         });
             window.location.href = '/index.html';
-            
+
     } catch (err) {
-        error.value = 'An error occurred during logout.';
+        window.location = '';
     }
 });
