@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
+const { render } = require('../../part1/app');
 
 // GET all users (for admin/testing)
 router.get('/', async (req, res) => {
@@ -61,6 +62,8 @@ module.exports = router;
 
 router.post('/logout', (req, res) => {
   req.session.destroy(err => {
-    if 
+    if (err) {
+      return render.status(500.json)
+    }
   })
 })
