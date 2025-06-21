@@ -14,7 +14,7 @@ const userRoutes = require('./routes/userRoutes');
 
 const session = require('express-session');
 app.use(session({
-  secret: 'dog', // just a dummy string 
+  secret: 'dog',
   resave: false,
   saveUninitialized: false
 }));
