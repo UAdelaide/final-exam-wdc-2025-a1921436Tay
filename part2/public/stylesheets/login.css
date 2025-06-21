@@ -26,5 +26,10 @@
 .login-button {
     width: 100%;
     padding: 0.5rem;
-    
+
+}
+
+.error {
+    color: red;
+    margin-top: 1rem;
 }
