@@ -29,7 +29,7 @@ createApp({
           window.location.href = 'walker-dashboard.html';
         }
       } catch (err) {
-        // 
+        // login error message
         error.value = 'An error occurred during login.';
       }
     }
