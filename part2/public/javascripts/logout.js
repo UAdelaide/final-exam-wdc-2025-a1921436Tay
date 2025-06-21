@@ -1,6 +1,6 @@
 document.getElementById('logout-button').addEventListener('click', async () => {
     try {
-        const res = await fetch('/api/users/logout', {
+        await fetch('/api/users/logout', {
             method: 'POST',
             credentials: 'include'
         });
@@ -9,4 +9,4 @@ document.getElementById('logout-button').addEventListener('click', async () => {
     } catch (err) {
         window.location.href = '/index.html';
     }
-}); 
+});
