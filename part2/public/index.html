@@ -12,7 +12,7 @@
 <body class="bg-light">
   <div id="app" class="login-container">
     <h1 class="heading">Welcome to the Dog Walking Service!</h1>
-    
+    <!--Login Form-->
     <form @submit.prevent="login" class="login-form" >
       <div class="fields">
         <label for="email" class="form-label">Email</label>
@@ -26,6 +26,7 @@
       <div v-if="error" class="error">{{ error }}</div>
     </form>
   </div>
+  <!---->
   <script src="javascripts/login.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
