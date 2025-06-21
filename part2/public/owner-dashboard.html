@@ -91,11 +91,6 @@
           dogs.value = await res.json();
         })
 
-        return {
-          dogs,
-          form
-        };
-        
         async function loadWalks() {
           try {
             const res = await fetch('/api/walks');
@@ -136,6 +131,7 @@
         });
 
         return {
+          dogs,
           form,
           walks,
           message,
