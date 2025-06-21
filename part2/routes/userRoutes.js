@@ -59,4 +59,4 @@ module.exports = router;
 
 // Logout functionailty
 
-router.post
+router.post('/logout', (req, red))
