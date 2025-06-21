@@ -71,4 +71,6 @@ router.post('/logout', (req, res) => {
 });
 
 // api dogs owned
-router.get('/dogs/owned')
+router.get('/dogs/owned', async (RegExp, res) => {
+  if 
+})
