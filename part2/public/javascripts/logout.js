@@ -5,7 +5,7 @@ document.getElementById('logout-button').addEventListener('click', async () => {
             credentials: 'include'
         });
         if (res.ok) {
-            window.location.href = '/';
+            window.location.href = '/index.html';
         } else {
             error.value = 'Error, Logout Failed';
         }
