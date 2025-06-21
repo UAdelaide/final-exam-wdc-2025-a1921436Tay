@@ -49,6 +49,8 @@ document.getElementById('logout-button').addEventListener('click', async () => {
         });
         if (res.ok) {
             window.location.href = '/';
-        } else
+        } else {
+            alert('Logout Failed');
+        }
     }
 })
