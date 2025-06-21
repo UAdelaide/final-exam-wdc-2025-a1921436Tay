@@ -37,3 +37,7 @@ createApp({
     return { form, error, login };
   }
 }).mount('#app');
+
+
+// LogOut Functionaility
+
