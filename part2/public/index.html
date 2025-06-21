@@ -26,6 +26,19 @@
       <div v-if="error" class="error">{{ error }}</div>
     </form>
   </div>
+
+    <h2 class="mt-5">All Dogs in the Database</h2>
+    <table class="table table-bordered" id="dogTable">
+      <thead>
+        <tr>
+          <th>Dog ID</th>
+          <th>Name</th>
+          <th>Size</th>
+          <th>Photo</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
   <!--JavaScript in seperate file for cleanliness-->
   <script src="javascripts/login.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
