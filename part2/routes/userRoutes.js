@@ -60,7 +60,7 @@ module.exports = router;
 
 // Logout functionailty
 
-router.post('/login', (req, res) => {
+router.post('/logout', (req, res) => {
   req.session.destroy(err => {
     if (err) {
       return render.status(500).json({ error: 'Logout Failed' });
