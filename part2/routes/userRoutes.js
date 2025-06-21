@@ -71,13 +71,18 @@ router.post('/logout', (req, res) => {
 });
 
 // api dogs owned
-router.get('/dogs/owned', async (RegExp, res) => {
-  if (!req.sesson.user || req.session.user.role !== 'owner') {
-    return res.status(403).json({error: 'Denied'});
+router.get('/dogs/owned', async (req, res) => {
+  if (!req.session.user || req.session.user.role !== 'owner') {
+    return res.status(403).json({ error: 'Access denied' });
   }
-  const [rows] = await db.query(
-    'SELECT dog_id, name FROM Dogs WHERE owner_id = ?',
-    [req.session.user.user_id]
-  );
-  );
-})
+
+  try {
+    const [rows] = await db.query(
+      'SELECT dog_id, name FROM Dogs WHERE owner_id = ?',
+      [req.session.user.user_id]
+    );
+    res.json(rows);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch dogs' });
+  }
+});
