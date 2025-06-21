@@ -22,13 +22,14 @@ createApp({
           error.value = result.error || 'Login failed';
           return;
         }
-        // directing user to correct dashboard
+        // directing user to correct dashboard based on role
         if (result.user.role === 'owner') {
           window.location.href = 'owner-dashboard.html';
         } else if (result.user.role === 'walker') {
           window.location.href = 'walker-dashboard.html';
         }
       } catch (err) {
+        // 
         error.value = 'An error occurred during login.';
       }
     }
