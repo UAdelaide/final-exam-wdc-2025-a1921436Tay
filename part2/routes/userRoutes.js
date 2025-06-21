@@ -69,3 +69,5 @@ router.post('/logout', (req, res) => {
     res.json({ messgae: 'Logout Successful'});
   });
 });
+
+// Get
