@@ -52,5 +52,7 @@ document.getElementById('logout-button').addEventListener('click', async () => {
         } else {
             alert('Logout Failed');
         }
+    } catch (err) {
+        
     }
 })
