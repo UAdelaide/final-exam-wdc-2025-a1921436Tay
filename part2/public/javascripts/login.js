@@ -6,7 +6,7 @@ createApp({
     const form = ref({ email: '', password: '' });
     const error = ref('');
 
-    
+    // login function on form submit
     async function login() {
       try {
         const res = await fetch('/api/users/login', {
