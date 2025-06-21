@@ -50,7 +50,7 @@ document.getElementById('logout-button').addEventListener('click', async () => {
         if (res.ok) {
             window.location.href = '/';
         } else {
-            error.value;
+            error.value = 'Error, Logout Failed';
         }
     } catch (err) {
         error.value = 'An error occurred during logout.';
