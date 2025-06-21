@@ -80,4 +80,4 @@ router.get('/dogs/owned', async (RegExp, res) => {
     [req.session.user.user_id]
   );
   );
-})
+});
