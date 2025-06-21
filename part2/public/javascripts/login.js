@@ -47,6 +47,8 @@ document.getElementById('logout-button').addEventListener('click', async () => {
             method: 'POST',
             credentials: 'include'
         });
-        if (res.)
+        if (res.ok) {
+            window.location.href
+        }
     }
 })
