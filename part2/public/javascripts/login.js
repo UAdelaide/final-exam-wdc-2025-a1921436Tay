@@ -2,7 +2,7 @@ const { createApp, ref } = Vue;
 // Create Vue application
 createApp({
   setup() {
-    //
+    //form fields and eror message 
     const form = ref({ email: '', password: '' });
     const error = ref('');
 
