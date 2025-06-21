@@ -69,3 +69,19 @@ router.post('/logout', (req, res) => {
     res.json({ messgae: 'Logout Successful'});
   });
 });
+
+router.get('/dogs/owned', async (req, res) => {
+  if (!req.session.user || req.session.user.role !== 'owner') {
+    return res.status(403).json({ error: 'Denied' });
+  }
+
+  try {
+    const [rows] = await db.query(
+      'SELECT dog_id, name FROM Dogs WHERE owner_id = ?',
+      [req.session.user.user_id]
+    );
+    res.json(rows);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch owned dogs' });
+  }
+});
